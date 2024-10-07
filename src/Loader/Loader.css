@@ -1,0 +1,41 @@
+.dot-loader {
+  width: 10px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+@keyframes black {
+  0% {
+    box-shadow: 20px 0 #000, -20px 0 #0002;
+    background: #000;
+  }
+  33% {
+    box-shadow: 20px 0 #000, -20px 0 #0002;
+    background: #0002;
+  }
+  66% {
+    box-shadow: 20px 0 #0002, -20px 0 #000;
+    background: #0002;
+  }
+  100% {
+    box-shadow: 20px 0 #0002, -20px 0 #000;
+    background: #000;
+  }
+}
+@keyframes red {
+  0% {
+    box-shadow: 20px 0 #f00, -20px 0 #f002;
+    background: #f00;
+  }
+  33% {
+    box-shadow: 20px 0 #f00, -20px 0 #f002;
+    background: #f002;
+  }
+  66% {
+    box-shadow: 20px 0 #f002, -20px 0 #f00;
+    background: #f002;
+  }
+  100% {
+    box-shadow: 20px 0 #f002, -20px 0 #f00;
+    background: #f00;
+  }
+}

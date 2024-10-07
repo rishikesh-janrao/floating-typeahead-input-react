@@ -1,0 +1,80 @@
+.box {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 40vh;
+  width: 30%;
+}
+.box__suggestions {
+  display: none;
+  position: relative;
+  border: 1px solid #ddd;
+  border-top: none;
+  margin: 0px 0.2rem;
+  transition: all 0.3s ease-out;
+}
+.box__suggestions--active {
+  display: block;
+}
+.box__suggestion-list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  max-height: 10rem;
+  overflow-y: scroll;
+}
+.box__suggestion-item {
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+}
+.box__suggestion-item:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+
+.box__input {
+  border: 2px solid #ccc;
+  border-radius: 0.4rem;
+  outline: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+.box__input:focus-within {
+  border-color: cornflowerblue;
+}
+.box__input input[data-state="floating"] {
+  border: none;
+  height: 100%;
+  padding-top: 0.5rem;
+  font-size: 1rem;
+}
+.box__input input[data-state="floating"]:hover,
+.box__input input[data-state="floating"]:focus {
+  border: none;
+  outline: none;
+  color: #000;
+}
+.box__input label[data-state="floating"] {
+  position: absolute;
+  font-size: 0.8rem;
+  pointer-events: none;
+  transition: all 0.1s ease-out;
+}
+.box__input input[data-state="floating"]:focus ~ label[data-state="floating"],
+.box__input
+  input[data-state="floating"][data-empty="filled"]:not(:placeholder-shown)
+  ~ label[data-state="floating"] {
+  transform: translateY(-90%);
+  font-size: 0.6rem;
+  color: #444;
+}
+.box__loader-container {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
